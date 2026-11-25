@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<customUI xmlns="http://schemas.microsoft.com/office/2009/07/customui" onLoad="RibbonLoaded">
+  <ribbon>
+    <tabs>
+      <tab id="lmTab" label="LiquidMorph Free">
+        <group id="shapeGroup" label="形状">
+          <menu id="shapeMenu" label="玻璃形状" size="large" tag="shape" getImage="RibbonImage" getEnabled="SlideAvailable">
+            <button id="shape1" label="矩形" tag="1" onAction="OnInsertCentered" getImage="RibbonImage" />
+            <button id="shape5" label="圆角矩形" tag="5" onAction="OnInsertCentered" getImage="RibbonImage" />
+            <button id="shape7" label="三角形" tag="7" onAction="OnInsertCentered" getImage="RibbonImage" />
+            <button id="shape9" label="圆形" tag="9" onAction="OnInsertCentered" getImage="RibbonImage" />
+            <button id="convert" label="将选中元素转为玻璃" tag="convert" onAction="OnInsertGlass" getImage="RibbonImage" getEnabled="ShapeSelected" />
+          </menu>
+        </group>
+        <group id="matGroup" label="材质预设">
+          <toggleButton id="mat18" label="液态玻璃" tag="mat18" onAction="ToggleChoice" getImage="RibbonImage" size="large" getEnabled="ShapeSelected" getPressed="ChoicePressed" />
+          <toggleButton id="mat0" label="轻盈玻璃" tag="mat0" onAction="ToggleChoice" getImage="RibbonImage" size="large" getEnabled="ShapeSelected" getPressed="ChoicePressed" />
+          <toggleButton id="mat2" label="磨砂玻璃" tag="mat2" onAction="ToggleChoice" getImage="RibbonImage" size="large" getEnabled="ShapeSelected" getPressed="ChoicePressed" />
+          <menu id="more" label="更多材质" size="large" tag="more" getImage="RibbonImage" getEnabled="SlideAvailable">
+            <toggleButton id="mat1" label="加厚玻璃" tag="mat1" onAction="ToggleChoice" getImage="RibbonImage" getEnabled="ShapeSelected" getPressed="ChoicePressed" />
+            <toggleButton id="mat4" label="条纹玻璃" tag="mat4" onAction="ToggleChoice" getImage="RibbonImage" getEnabled="ShapeSelected" getPressed="ChoicePressed" />
+            <toggleButton id="mat6" label="透镜玻璃" tag="mat6" onAction="ToggleChoice" getImage="RibbonImage" getEnabled="ShapeSelected" getPressed="ChoicePressed" />
+            <toggleButton id="mat11" label="菱纹玻璃" tag="mat11" onAction="ToggleChoice" getImage="RibbonImage" getEnabled="ShapeSelected" getPressed="ChoicePressed" />
+            <toggleButton id="mat12" label="拉丝玻璃" tag="mat12" onAction="ToggleChoice" getImage="RibbonImage" getEnabled="ShapeSelected" getPressed="ChoicePressed" />
+            <toggleButton id="mat5" label="水纹玻璃" tag="mat5" onAction="ToggleChoice" getImage="RibbonImage" getEnabled="ShapeSelected" getPressed="ChoicePressed" />
+            <toggleButton id="mat3" label="虹光玻璃" tag="mat3" onAction="ToggleChoice" getImage="RibbonImage" getEnabled="ShapeSelected" getPressed="ChoicePressed" />
+            <toggleButton id="mat7" label="锤纹玻璃" tag="mat7" onAction="ToggleChoice" getImage="RibbonImage" getEnabled="ShapeSelected" getPressed="ChoicePressed" />
+            <toggleButton id="mat8" label="冰晶玻璃" tag="mat8" onAction="ToggleChoice" getImage="RibbonImage" getEnabled="ShapeSelected" getPressed="ChoicePressed" />
+            <toggleButton id="mat9" label="气泡玻璃" tag="mat9" onAction="ToggleChoice" getImage="RibbonImage" getEnabled="ShapeSelected" getPressed="ChoicePressed" />
+            <toggleButton id="mat10" label="波浪玻璃" tag="mat10" onAction="ToggleChoice" getImage="RibbonImage" getEnabled="ShapeSelected" getPressed="ChoicePressed" />
+            <toggleButton id="mat13" label="雾滴玻璃" tag="mat13" onAction="ToggleChoice" getImage="RibbonImage" getEnabled="ShapeSelected" getPressed="ChoicePressed" />
+            <toggleButton id="mat14" label="裂纹玻璃" tag="mat14" onAction="ToggleChoice" getImage="RibbonImage" getEnabled="ShapeSelected" getPressed="ChoicePressed" />
+            <toggleButton id="mat15" label="蚀刻玻璃" tag="mat15" onAction="ToggleChoice" getImage="RibbonImage" getEnabled="ShapeSelected" getPressed="ChoicePressed" />
+            <toggleButton id="mat16" label="反色玻璃" tag="mat16" onAction="ToggleChoice" getImage="RibbonImage" getEnabled="ShapeSelected" getPressed="ChoicePressed" />
+            <toggleButton id="mat17" label="镀膜玻璃" tag="mat17" onAction="ToggleChoice" getImage="RibbonImage" getEnabled="ShapeSelected" getPressed="ChoicePressed" />
+          </menu>
+        </group>
+        <group id="quality" label="玻璃质感">
+          <button id="pBlur" label="模糊强度" tag="Blur" onAction="RibbonAction" getImage="RibbonImage" size="large" />
+          <button id="pShadow" label="阴影强度" tag="Shadow" onAction="RibbonAction" getImage="RibbonImage" size="large" />
+          <button id="pColor" label="玻璃颜色" tag="Color" onAction="RibbonAction" getImage="RibbonImage" size="large" />
+          <button id="pTint" label="颜色浓度" tag="Tint" onAction="RibbonAction" getImage="RibbonImage" size="large" />
+          <button id="pMagnification" label="放大倍率" tag="Magnification" onAction="RibbonAction" getImage="RibbonImage" size="large" />
+        </group>
+        <group id="light" label="边光设置">
+          <menu id="edges" label="边光类型" size="large" tag="edge" getImage="RibbonImage">
+            <toggleButton id="edge0" label="细缘" tag="edge0" onAction="ToggleChoice" getImage="RibbonImage" getPressed="ChoicePressed" />
+            <toggleButton id="edge1" label="柔缘" tag="edge1" onAction="ToggleChoice" getImage="RibbonImage" getPressed="ChoicePressed" />
+            <toggleButton id="edge2" label="双缘" tag="edge2" onAction="ToggleChoice" getImage="RibbonImage" getPressed="ChoicePressed" />
+            <toggleButton id="edge5" label="掠光" tag="edge5" onAction="ToggleChoice" getImage="RibbonImage" getPressed="ChoicePressed" />
+          </menu>
+          <button id="pLightAngle" label="边光角度" tag="LightAngle" onAction="RibbonAction" getImage="RibbonImage" size="large" />
+          <button id="pStrength" label="边光强度" tag="Strength" onAction="RibbonAction" getImage="RibbonImage" size="large" />
+          <button id="pGlowWidth" label="泛光宽度" tag="GlowWidth" onAction="RibbonAction" getImage="RibbonImage" size="large" />
+          <button id="pSpread" label="边缘映色" tag="Spread" onAction="RibbonAction" getImage="RibbonImage" size="large" />
+          <button id="pRefractionStrength" label="边光折射" tag="RefractionStrength" onAction="RibbonAction" getImage="RibbonImage" size="large" />
+          <button id="pDispersionStrength" label="色散强度" tag="DispersionStrength" onAction="RibbonAction" getImage="RibbonImage" size="large" />
+        </group>
+        <group id="pattern" label="纹理设置" getVisible="PatternVisible">
+          <button id="opPatternScale" label="纹理尺度" tag="PatternScale" onAction="RibbonAction" getImage="RibbonImage" size="large" />
+          <button id="opPatternDepth" label="纹理深度" tag="PatternDepth" onAction="RibbonAction" getImage="RibbonImage" size="large" />
+          <button id="opPatternAngle" label="纹理角度" tag="PatternAngle" onAction="RibbonAction" getImage="RibbonImage" size="large" />
+        </group>
+        <group id="motion" label="玻璃动画">
+          <splitButton id="ASplit" size="large">
+            <button id="btnA" label="设置起点" tag="A" onAction="RibbonAction" getImage="RibbonImage" getEnabled="GlassCommandEnabled" />
+            <menu id="AMenu">
+              <button id="btnclearA" label="清空路径" tag="clearA" onAction="RibbonAction" getImage="RibbonImage" getEnabled="GlassCommandEnabled" />
+            </menu>
+          </splitButton>
+          <splitButton id="BSplit" size="large">
+            <button id="btnB" label="设置终点" tag="B" onAction="RibbonAction" getImage="RibbonImage" getEnabled="GlassCommandEnabled" />
+            <menu id="BMenu">
+              <button id="btnclearB" label="重置终点" tag="clearB" onAction="RibbonAction" getImage="RibbonImage" getEnabled="GlassCommandEnabled" />
+            </menu>
+          </splitButton>
+          <splitButton id="animateSplit" size="large">
+            <button id="btnanimate" label="生成动画" tag="animate" onAction="RibbonAction" getImage="RibbonImage" getEnabled="GlassCommandEnabled" />
+            <menu id="animateMenu">
+              <button id="btnSeconds" label="动画时长" tag="Seconds" onAction="RibbonAction" getImage="RibbonImage" />
+              <button id="btnFps" label="动画帧率" tag="Fps" onAction="RibbonAction" getImage="RibbonImage" />
+              <button id="btnPathX" label="水平路径偏移" tag="PathX" onAction="RibbonAction" />
+              <button id="btnPathY" label="垂直路径偏移" tag="PathY" onAction="RibbonAction" />
+              <button id="btnEasingX1" label="缓动曲线 X1" tag="EasingX1" onAction="RibbonAction" />
+              <button id="btnEasingY1" label="缓动曲线 Y1" tag="EasingY1" onAction="RibbonAction" />
+              <button id="btnEasingX2" label="缓动曲线 X2" tag="EasingX2" onAction="RibbonAction" />
+              <button id="btnEasingY2" label="缓动曲线 Y2" tag="EasingY2" onAction="RibbonAction" />
+            </menu>
+          </splitButton>
+        </group>
+        <group id="objects" label="对象操作" autoScale="true">
+          <button id="oprefresh" label="状态更新" tag="refresh" onAction="RibbonAction" getImage="RibbonImage" size="large" getEnabled="ShapeSelected" />
+          <button id="opreset" label="状态重置" tag="reset" onAction="RibbonAction" getImage="RibbonImage" size="large" getEnabled="GlassCommandEnabled" />
+          <button id="opsavePreset" label="保存预设" tag="savePreset" onAction="RibbonAction" getImage="RibbonImage" size="large" />
+          <button id="oploadPreset" label="预设" tag="loadPreset" onAction="RibbonAction" getImage="RibbonImage" size="large" />
+        </group>
+        <group id="ui" label="界面">
+          <menu id="themes" label="主题" size="large" tag="theme" getImage="RibbonImage">
+            <toggleButton id="colorTheme" label="彩色" tag="colorTheme" onAction="ToggleChoice" getImage="RibbonImage" getPressed="ChoicePressed" />
+            <toggleButton id="lineTheme" label="线条" tag="lineTheme" onAction="ToggleChoice" getImage="RibbonImage" getPressed="ChoicePressed" />
+          </menu>
+        </group>
+        <group id="license" label="产品授权">
+          <button id="about" label="授权信息" tag="about" onAction="RibbonAction" getImage="RibbonImage" size="large" />
+        </group>
+      </tab>
+    </tabs>
+  </ribbon>
+</customUI>
